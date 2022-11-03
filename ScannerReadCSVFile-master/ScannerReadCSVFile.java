@@ -22,9 +22,10 @@ public class ScannerReadCSVFile
         // Continue while there's still data in the file to be read
         
         System.out.println("Class: Avg score");
+        String line = scanner.nextLine();
         while (scanner.hasNext()) {
             // Read the next line of the file
-            String line = scanner.nextLine();
+            line = scanner.nextLine();
             //System.out.println(line);
 
             // line now contains a line of comma-separated numbers
@@ -55,7 +56,6 @@ public class ScannerReadCSVFile
             int avg = 0;
             Scanner lineScanner = new Scanner(line);
             lineScanner.useDelimiter(",");
-            lineScanner.skip("Class section,1,2,3,4,5,6,7,8,9,10");
             String CLASS = lineScanner.next();
             while (i<10) {
                 score = score + lineScanner.nextInt();
