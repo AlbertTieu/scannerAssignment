@@ -59,9 +59,9 @@ public class ScannerReadCSVFile
             String CLASS = lineScanner.next();
             while (i<10) {
                 score = score + lineScanner.nextInt();
-                avg = score/10;
                 i++;
             }
+            avg = score/10;
             System.out.println(CLASS + ": " + avg);
         }
     }
@@ -74,7 +74,6 @@ public class ScannerReadCSVFile
             System.out.println("File not found");
         } catch (Exception e) {
             System.out.println("There's an error someplace. Try using the debugger to find it!");
-
         }
     }
 }
